@@ -17,3 +17,9 @@ The goal of this package is to enable simple and fast simulation and visualizati
 * Work on the front end visualization in Javascript
 
   * State placement to make it look good
+
+## Ideas
+
+This is where I am putting ideas that I'm having while I'm figuring out the design I want.
+
+* If I implement a multitape TM, then I automatically get every other finite automata.
