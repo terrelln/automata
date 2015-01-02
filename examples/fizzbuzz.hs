@@ -45,6 +45,9 @@ printBuzz = DFA (get_Q buzz) (get_E buzz) (Kleisli delta') (get_q_0 buzz) (get_F
 --     D' = (Q', E', delta', q_0', F')
 --     intersectFA D D' = (Q x Q', E union E', delta'', (q_0,q_0'), F x F')
 --     delta'' ((p1,p2),s) = (delta(p1,s), delta'(p2,s))
+--
+-- The hacked on FizzBuzz printing requires the implementation of intersectFA
+-- to call delta before it calls delta', which it happens to do.
 fizzBuzz = intersectFA printFizz printBuzz
 
 main = (runKleisli $ applyFA fizzBuzz) [1..100]
